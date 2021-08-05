@@ -1,11 +1,14 @@
 [
     {
-        "Producto1" : "Cyberpunk", "Precio1" : "60$"
+        "Producto1" : "Cyberpunk",
+        "Precio1" : "60$"
     },
     {
-        "Producto2" : "Ghost of Tsuchima", "Precio2" : "20$"
+        "Producto2" : "Ghost of Tsuchima",
+        "Precio2" : "20$"
     },
     {
-        "Producto3" : "Doom", "Precio3" : "40$"
+        "Producto3" : "Doom",
+        "Precio3" : "40$"
     }
 ]
