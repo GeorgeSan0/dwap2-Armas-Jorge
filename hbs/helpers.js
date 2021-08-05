@@ -10,7 +10,6 @@ hbs.registerHelper('Producto1',(i)=>{
     }else{
         return words[0].Precio1;//Regresa el precio del producto 1
     }
-    ;
 });
 
 //Para el Producto2
@@ -34,5 +33,5 @@ hbs.registerHelper('Producto3',(i)=>{
         return words[2].Producto3;//Regresa el Nombre del producto 3
     }else{
         return words[2].Precio3;//Regresa el precio del producto 3
-    };
+    }
 });

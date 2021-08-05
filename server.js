@@ -1,20 +1,24 @@
-const express=require('express');
-const app=express();
-
-const hbs=require('hbs');
+express = require('express')
+const app = express()
+ 
+const hbs = require('hbs');
 require('./hbs/helpers');
 
-const port=process.env.PORT ||3000;
+const port = process.env.PORT || 8080;
+
+app.use(express.static(__dirname + '/public'));
+
+//Espress HBS view engine
 hbs.registerPartials(__dirname + '/views/partials');
 
+app.set('view engine', 'hbs');
 
-app.use(express.static(__dirname+'/public'));
-app.set('view engine','hbs');
-
-app.get(`/`,(req,res)=>{
-    res.render('home');
+app.get('/', (req, res) => {
+    res.render('home', {
+        anio: new Date().getFullYear()
+    });
 });
 
-app.listen(port, ()=>{
-    console.log(`Servidor ejecutandose en el puerto ${port}`);
+app.listen(port, () =>{
+    console.log(`Escuchando peticiones en el puerto ${port}`)
 });
